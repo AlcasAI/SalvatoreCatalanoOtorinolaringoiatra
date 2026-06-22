@@ -331,9 +331,25 @@ ul { margin: 0; padding: 0; }
   .brand-text small { display: none; }
 }
 
+/* ----------------------------- Zona servita ----------------------------- */
+.section-area { background: #fff; }
+.area-list {
+  list-style: none; display: flex; flex-wrap: wrap; gap: .6rem;
+  justify-content: center; max-width: 880px; margin: 0 auto;
+}
+.area-list li {
+  background: var(--bg-soft); border: 1px solid var(--line); color: var(--ink-soft);
+  font-weight: 600; padding: .55rem 1.1rem; border-radius: 999px; font-size: .95rem;
+}
+
+/* ----------------------------- Animazioni allo scroll ----------------------------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
 /* ----------------------------- Accessibilità ----------------------------- */
 :focus-visible { outline: 3px solid var(--brand-2); outline-offset: 2px; border-radius: 4px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
 }

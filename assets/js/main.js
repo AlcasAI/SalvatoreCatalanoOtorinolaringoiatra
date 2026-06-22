@@ -47,4 +47,27 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
+
+  /* --- Animazioni di entrata allo scroll (rispetta prefers-reduced-motion) --- */
+  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && !prefersReduced) {
+    var selector = ".section-head, .card, .pat-group, .sede-card, .review, " +
+                   ".area-list li, .feature .col-text, .feature .col-media, " +
+                   ".hero-content, .hero-card, .credentials, .contact-form";
+    var els = document.querySelectorAll(selector);
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    els.forEach(function (el, i) {
+      el.classList.add("reveal");
+      el.style.transitionDelay = (i % 4) * 70 + "ms";
+      io.observe(el);
+    });
+  }
 })();
