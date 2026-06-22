@@ -30,18 +30,17 @@ Sito **statico** (HTML + CSS + JavaScript, senza framework e senza build) pensat
 Cerca nel codice i commenti **`⚠️ DA CONFERMARE`** / **`DA INSERIRE`** / **`DA COMPLETARE`**.
 Ecco la checklist dei dati reali da inserire:
 
-| Dato | Dove | Note |
+| Dato | Stato | Note |
 |---|---|---|
-| **Telefono** | `index.html`, `privacy.html` | sostituire `+390324000000` e `0324 00 00 00` |
-| **WhatsApp** | `index.html` (link `wa.me`) | numero in formato internazionale senza `+` |
-| **Email** | `index.html`, `privacy.html` | es. `info@drsalvatorecatalano.it` |
-| **Indirizzo studio** | sezione *Sedi e orari* | via, CAP, eventuale studio privato |
-| **Orari** | sezione *Sedi e orari* + JSON-LD | confermare giorni/orari |
-| **Coordinate geo** | JSON-LD `geo` | lat/long reali per Google Maps |
-| **P.IVA / Ordine Medici** | footer + privacy | obbligo di legge |
-| **Foto** | `assets/img/` | vedi mappa qui sotto |
-| **Recensioni** | sezione *Recensioni* | verificare/aggiornare i testi reali |
-| **Dominio** | meta `canonical`, `og:url`, sitemap, robots | se diverso da `drsalvatorecatalano.it` |
+| Telefono / WhatsApp | ✅ inserito | 366 217 5507 |
+| Indirizzo + coordinate | ✅ inserito | Ospedale San Biagio, Domodossola |
+| Listino prezzi | ✅ inserito | da profilo MioDottore |
+| Recensioni | ✅ reali | 6 in pagina, 25 totali su MioDottore |
+| Foto | ✅ caricate | 5 scatti reali |
+| **Email** | ⛔ DA FORNIRE | serve anche per ricevere il modulo di contatto |
+| **P.IVA / n° Ordine Medici** | ⛔ DA FORNIRE | obbligo di legge (footer + privacy) |
+| **Orari studio** | ⛔ DA DEFINIRE | ora il sito indica "su appuntamento" |
+| Dominio | ➡️ se diverso | aggiornare `canonical`, `og:url`, sitemap, robots |
 
 ### Foto da caricare in `assets/img/`
 Carica i file con **esattamente** questi nomi (il sito li richiama già):

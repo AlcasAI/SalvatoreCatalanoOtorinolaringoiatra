@@ -180,7 +180,7 @@ ul { margin: 0; padding: 0; }
 .col-text h2 { margin-top: .2rem; }
 .about-photo, .feature-media { border-radius: var(--radius); box-shadow: var(--shadow); }
 .about-photo { aspect-ratio: 4/5; }
-.feature-media { aspect-ratio: 4/3; }
+.feature-media { aspect-ratio: 4/5; }
 
 .credentials, .ticks { list-style: none; display: grid; gap: .55rem; margin: 1.2rem 0 1.6rem; }
 .credentials li, .ticks li { padding-left: 1.8rem; position: relative; color: var(--ink-soft); }
@@ -203,6 +203,23 @@ ul { margin: 0; padding: 0; }
 }
 .card h3 { margin-bottom: .35rem; }
 .card p { color: var(--ink-soft); margin: 0; font-size: .96rem; }
+
+/* ----------------------------- Tariffe ----------------------------- */
+.tariffe {
+  margin-top: clamp(2rem, 4vw, 3rem); background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); box-shadow: var(--shadow);
+}
+.tariffe-title { text-align: center; margin-bottom: 1.2rem; }
+.tariffe-list { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 2.5rem; }
+.tariffe-list li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  padding: .75rem 0; border-bottom: 1px dashed var(--line);
+}
+.tariffe-list li span { color: var(--ink-soft); }
+.tariffe-list li b { color: var(--brand); font-weight: 800; white-space: nowrap; }
+.tariffe-free b { color: #1f9e54; }
+.tariffe-note { margin: 1.3rem 0 0; font-size: .84rem; color: var(--muted); text-align: center; }
+@media (max-width: 680px) { .tariffe-list { grid-template-columns: 1fr; } }
 
 /* ----------------------------- Feature ----------------------------- */
 .feature { background: #fff; }
@@ -239,7 +256,8 @@ ul { margin: 0; padding: 0; }
 }
 .stars { color: var(--accent); letter-spacing: .1em; font-size: 1.1rem; margin-bottom: .6rem; }
 .review blockquote { margin: 0 0 .8rem; font-size: 1.02rem; color: var(--ink); font-style: italic; }
-.review figcaption { color: var(--muted); font-weight: 600; font-size: .9rem; }
+.review figcaption { color: var(--ink); font-weight: 700; font-size: .92rem; }
+.review figcaption span { display: block; font-weight: 500; font-size: .78rem; color: var(--muted); margin-top: .15rem; }
 .reviews-cta { text-align: center; margin-top: 1.8rem; }
 
 /* ----------------------------- FAQ ----------------------------- */
@@ -343,7 +361,7 @@ ul { margin: 0; padding: 0; }
   margin: 0; background: #fff; border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
 }
-.gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.gallery-item img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
 .gallery-item figcaption { padding: .9rem 1.2rem; font-weight: 600; color: var(--ink-soft); font-size: .95rem; }
 
 /* ----------------------------- Zona servita ----------------------------- */
