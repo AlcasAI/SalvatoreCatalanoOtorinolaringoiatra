@@ -52,7 +52,7 @@
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if ("IntersectionObserver" in window && !prefersReduced) {
     var selector = ".section-head, .card, .pat-group, .sede-card, .review, " +
-                   ".area-list li, .feature .col-text, .feature .col-media, " +
+                   ".area-list li, .gallery-item, .feature .col-text, .feature .col-media, " +
                    ".hero-content, .hero-card, .credentials, .contact-form";
     var els = document.querySelectorAll(selector);
     var io = new IntersectionObserver(function (entries) {

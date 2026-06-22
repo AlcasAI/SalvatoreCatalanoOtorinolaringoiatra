@@ -39,9 +39,24 @@ Ecco la checklist dei dati reali da inserire:
 | **Orari** | sezione *Sedi e orari* + JSON-LD | confermare giorni/orari |
 | **Coordinate geo** | JSON-LD `geo` | lat/long reali per Google Maps |
 | **P.IVA / Ordine Medici** | footer + privacy | obbligo di legge |
-| **Foto** | `assets/img/` | ritratto professionale + immagini |
+| **Foto** | `assets/img/` | vedi mappa qui sotto |
 | **Recensioni** | sezione *Recensioni* | verificare/aggiornare i testi reali |
 | **Dominio** | meta `canonical`, `og:url`, sitemap, robots | se diverso da `drsalvatorecatalano.it` |
+
+### Foto da caricare in `assets/img/`
+Carica i file con **esattamente** questi nomi (il sito li richiama già):
+
+| Nome file | Quale foto | Dove appare | Privacy |
+|---|---|---|---|
+| `dott-catalano-endoscopia.jpg` | Dott. che guarda in camera con l'endoscopio vicino alla bocca del paziente | Hero | OK (paziente non identificabile) |
+| `dott-catalano-ritratto.jpg` | Dott. sorridente in piedi accanto alla torre Olympus | Chi sono + anteprima social | OK (solo medico) |
+| `dott-catalano-endoscopia-nasale.jpg` | Endoscopia nasale al signore con capelli bianchi | Chirurgia rino-sinusale | ⚠️ paziente identificabile: serve consenso |
+| `dott-catalano-laringoscopia.jpg` | Esame con monitor rosa, occhi del paziente oscurati | In ambulatorio | OK (anonimizzata) |
+| `dott-catalano-microscopio.jpg` | Dott. al microscopio Carl Zeiss (otomicroscopia) | In ambulatorio | ⚠️ paziente identificabile: serve consenso |
+
+> **Consenso immagini pazienti**: per le foto in cui il paziente è riconoscibile serve un consenso scritto
+> all'uso dell'immagine. In alternativa, ritaglia/sfoca il volto prima di pubblicare.
+> Carica file ottimizzati per il web (lato lungo ~1600px, < 300 KB).
 
 ### Modulo di contatto (gratuito)
 Il form usa un endpoint placeholder. Per riceverlo via email **senza backend e senza costi**:
